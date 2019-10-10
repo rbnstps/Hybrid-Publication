@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("select").change(function(){
+        $(this).find("option:selected").each(function(){
+            var optionValue = $(this).attr("value");
+            if(optionValue){
+                $(".box").not("." + optionValue).hide();
+                $("." + optionValue).show();
+            } else{
+                $(".box").hide();
+            }
+        });
+    }).change();
+});
+</script>
+
+
+
+
+<html>
+
+	<title>
+		Invisible Planets / Folding Beijing
+	</title>
+<head>
+<style>
+
+
+
+
+
+body {
+
+
+
+color: black;
+background-color:lightgrey;
+
+font-family: neue-haas-grotesk-display, sans-serif;
+font-weight: 200;
+
+  font-size: .8vw;
+
+  margin:0px;
+  padding: 0px;
+}
+
+
+select{margin-left: 40vw;
+margin-top:46vh;}
+
+   .box{
+    height: 100vw;
+
+        color: #fff;
+        position: fixed;
+        width: 100%;
+        padding: 20px;
+        display: none;
+        margin-top: 0px;
+    }
+    .red{ background: #ff0000; height: 100%; position: fixed; top:0px; padding-top: 50vh; text-align: center; }
+    .green{ background: #228B22;height: 100%; position: fixed; top:0px; padding-top: 50vh; text-align: center;}
+/*    .blue{ background: #0000ff; }*/
+
+
+
+	</style>
+</head>
+<body>
+
+
+ <div>
+        <select>
+            <option>How Many Social Media Accounts do you have in total?</option>
+            <option value="red"><10</option>
+            <option value="green">>10</option>
+    <!--         <option value="blue">Blue</option> -->
+        </select>
+    </div>
+    <div class="red box"> read your text <a href="test.html">here </a></div>
+    <div class="green box">read your text <a href="https://nl.pinterest.com/pin/315392780155630752/?nic=1" >here </a></div>
+<!--     <div class="blue box">You have selected <strong>blue option</strong> so i am here</div> -->
+
+
+
+</body>
+
+   
+</html>
+
